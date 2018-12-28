@@ -1,0 +1,23 @@
+{
+  "name": "CustomerView",
+  "version": "1.0.0",
+  "description": "CustomerView(Nodejs_MySQL)",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cbessjr/CustomerView.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cbessjr/CustomerView/issues"
+  },
+  "homepage": "https://github.com/cbessjr/CustomerView#readme",
+  "dependencies": {
+    "mysql": "^2.16.0"
+  }
+}
