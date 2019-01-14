@@ -19,4 +19,5 @@ CREATE TABLE products (
 );
 
 -- Database display for verification all table columns were created successfully
+USE bamazon;
 SELECT * FROM products;
