@@ -15,9 +15,12 @@ CREATE TABLE products (
 
 
 
+
+
+
 -- Select statement to view the products table in the bamazon database
 
-Use bamazon;
+USE bamazon;
 
 SELECT * FROM products;
 
@@ -34,3 +37,23 @@ values (' Banana', 'Produce', .25, 1000),
             ('Chair', 'Furniture', 25.00, 100),
             ('Couch', 'Furniture', 300.00, 50);
 
+
+
+USE bamazon;
+
+UPDATE products
+SET stock_quantity = stock_quantity + 1000
+WHERE item_id = 1;
+
+
+
+
+USE bamazon;
+
+SELECT *  FROM products;
+
+
+USE bamazon;
+
+SELECT stock_quantity FROM products
+WHERE item_id = 1;
