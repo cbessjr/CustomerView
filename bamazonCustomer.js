@@ -94,7 +94,7 @@ function itemPurchase() {
                         connection.query(updateQuery, [quantitySQL, choice], function (error, response) {
                             console.log("Purchase made successfully");
                             console.log("You have purhased " + quantity + " " + productSQL + "s");
-                            console.log("Total Cost: " + price);
+                            console.log("Total Cost: $" + price);
                             itemPurchase();
                         })
                     } else {
