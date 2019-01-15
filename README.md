@@ -50,7 +50,9 @@ CustomerView is a Node.js app connected to a MySQL database designed for custome
   The application will then report if the requested quantity exists in the database for purchase. If the quantity is not       available, the application will report this to the user. Then request a new item and quantity for purchase. If the           quantity exists, the application will report a successful purchase to the user which includes the item name, quantity, and   total price. The database will be updated by subtracting the purchase the stock_quantity.  
   
   
+  ### Screenshots
   
+ - See the Screenshot for CustomerView.docx in the file listings.
   
   ### Future Updates
   
