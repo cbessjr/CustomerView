@@ -77,27 +77,31 @@ function itemPurchase() {
                 // console.log(choice);
                 // console.log(quantity);
 
-                var selectQuery = "SELECT product_name, stock_quantity FROM products WHERE item_id=?"
+                var selectQuery = "SELECT product_name, price, stock_quantity FROM products WHERE item_id=?"
                 connection.query(selectQuery, [choice], function (error, response) {
                     // console.log(response);
                     var productSQL = response[0].product_name;
+                    var priceSQL = response[0].price;
                     var quantitySQL = response[0].stock_quantity;
                     // console.log(quantitySQL);
 
                     if (quantitySQL > quantity) {
                         quantitySQL = quantitySQL - quantity;
-
+                        
+                        var price = priceSQL * quantity;
                         var updateQuery = "UPDATE products SET stock_quantity=? WHERE item_id=?"
 
                         connection.query(updateQuery, [quantitySQL, choice], function (error, response) {
                             console.log("Purchase made successfully");
                             console.log("You have purhased " + quantity + " " + productSQL + "s");
-                            // itemPurchase();
+                            console.log("Total Cost: " + price);
+                            itemPurchase();
                         })
                     } else {
                         console.log("We are sorry. There are not enough " + productSQL + "s in our inventory to meet your request, at this time.")
-                        // itemPurchase();
+                        itemPurchase();
                     }
+                    
                 })
 
             }
